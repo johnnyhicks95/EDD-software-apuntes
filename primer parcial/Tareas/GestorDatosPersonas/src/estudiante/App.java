@@ -1,3 +1,4 @@
+
 /* Cree un proyecto en el que implemente los métodos que se requieran para ingresar
  datos de un conjunto de personas (que pueden ser estudiantes o no). 
  El usuario del sistema podrá insertar los datos de tantas personas como requiera. 
@@ -11,7 +12,7 @@
 5. Mostrar los datos de la persona de menor edad.
 6. Calcular la mediana de las edades de las personas. 
 */
-
+package estudiante;
 
 public class App {
     public static void main(String[] args) throws Exception {

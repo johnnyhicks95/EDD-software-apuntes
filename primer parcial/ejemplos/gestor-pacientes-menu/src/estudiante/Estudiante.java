@@ -1,4 +1,4 @@
-// package estudiante;
+package estudiante;
 
 public class Estudiante {
     String ci;

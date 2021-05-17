@@ -1,4 +1,4 @@
-// package estudiante;
+package estudiante;
 
 import validacion.Validador;
 import interfaz.consola.Consola;

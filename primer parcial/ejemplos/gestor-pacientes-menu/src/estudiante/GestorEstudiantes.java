@@ -1,5 +1,5 @@
 
-// package estudiante;
+package estudiante;
 
 public class GestorEstudiantes {
 
