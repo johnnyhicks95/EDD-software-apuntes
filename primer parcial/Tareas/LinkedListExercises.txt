@@ -1,0 +1,199 @@
+// Linked list manipulations
+
+final class Node
+{
+    char info;
+    Node next;
+    public Node(char letter, Node node)
+    {
+       info = letter;
+       next = node;
+    }
+}
+
+Ejercicio 1 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2 );
+    p1.next.next = new Node( 3 );
+    Node r3 = p1.next.next;
+
+    p1 = p1.next;
+
+Ejercicio 2 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    Node q2 = p1.next;
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    p1 = q2;
+
+Ejercicio 3 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    Node q2 = p1.next;
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    q2 = p1;
+
+Ejercicio 4 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    r3 = p1.next;
+
+Ejercicio 5 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    p1.info = r3.info;
+
+Ejercicio 6 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    p1.info = p1.next.next.info;
+
+Ejercicio 7 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    p1.next.next = new Node( 3, null );
+    Node r3 = p1.next.next;
+
+    // p1.next.next.next = p1;
+    r3.next = p1;
+
+Ejercicio 8 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    Node q2 = p1.next;
+    p1.next.next = new Node( 3, null );
+
+    q2.next.next = p1;
+
+Ejercicio 9 : 
+    Node p1 = new Node( 1, null );
+    p1.next = new Node( 2, null );
+    p1.next.next = new Node( 3, null );
+
+    p1.next.next.next = p1;
+
+Ejercicio 10 : 
+    Node p1 = new Node( 'A', null );
+    p1.next = new Node( 'B', null );
+    p1.next.next = new Node( 'C', null );
+    Node q3 = p1.next.next;
+
+    p1.next = q3;
+
+Ejercicio 11 : 
+    Node p1 = new Node( 'A', null );
+    p1.next = new Node( 'B', null );
+    p1.next.next = new Node( 'C', null );
+
+    p1.next = p1.next.next;
+
+Ejercicio 12: 
+    Node p = new Node( '-', null );
+    p.next = new Node( '-', null );
+    p.next.next = new Node( '-', null );
+    p.next.next.next = new Node( '-', null );
+    q = p;
+
+    While( q.next != null ) 
+        q = q.next;
+
+Ejercicio 13 : 
+    Node p = new Node( 'a', null );
+    p.next = new Node( 'b', null );
+    p.next.next = new Node( 'c', null );
+    p.next.next.next = new Node( 'c', null );
+    q = p;
+
+    While( q.info != 'c' ) 
+        q = q.next;
+
+Ejercicio 14 : 
+    Node p;
+
+    P           = new Node( 'A', null );
+    p.next      = new Node ('B', null);
+    p.next.next  = new Node ( 'C', null);
+    p.next.next.next = new Node ( 'D', null ); 
+
+Ejercicio 15 : 
+    Node q;
+    Node p = new Node('B', null);
+    p.next = new Node( 'C', null);
+
+    q = new Node( "A", null)
+    q.next = p;
+    p = q;
+    q = null;
+
+Ejercicio 16 : 
+    Node p      = new Node( 'A', null );
+    p.next      = new Node ('B', null);
+    p.next.next  = new Node ( 'C', null);
+
+    p.next.next.next = new Node( 'D' null)
+Ejercicio 17 : 
+    Node p      = new Node( 'A', null );
+    p.next      = new Node ('B', null);
+    p.next.next  = new Node ( 'C', null);
+    Node q;
+
+    q = p;
+    p = p.next;
+    p.next.next = q;
+    q.next = null;
+
+Ejercicio 18 : 
+    Node p      = new Node( 'A', null );
+    p.next      = new Node ('B', null);
+    p.next.next  = new Node ( 'C', null);
+
+    P.next.next.next = p;
+    P = p.next;
+    P.next.next.next = null;
+
+Ejercicio 19 : 
+    Node p      = new Node( 'E', null );
+    p.next      = new Node ('H', null);
+    p.next.next  = new Node ( 'M', null);
+    Node q      = new Node( 'B', null );
+    q.next      = new Node ('F', null);
+    q.next.next  = new Node ( 'G', null);
+    q.next.next.next  = new Node ( 'R', null);
+
+    p.next.next.next = q.next.next.next; // M -> R
+    q.next.next.next = p.next; // G -> H
+    p.next = q.next;  // E -> F
+    q.next = p;  // B -> E 
+    p = q;  // p = B
+    q = null;  
+
+Ejercicio 20 : 
+    Node p      = new Node( 'A', null );
+    p.next      = new Node ('B', null);
+    p.next.next  = new Node ( 'C', null);
+    p.next.next.next  = new Node ( 'D', null);
+    Node q, r;
+
+    r = p;
+    q = p.next.next.next;
+    q.next = p.next.next;
+    q.next.next = p.next;  // p - q   
+    q.next.next.next = r;
+    p = q;
+    q = null;
+    r = null;
+
+

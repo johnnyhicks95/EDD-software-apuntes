@@ -42,4 +42,107 @@ public class GestorPersonas {
         }
     }
 
+    // opcion 2
+    void mayoresA20(){
+        for (Persona persona : this.personas) {
+            if ( !(persona instanceof Persona) | persona != null && persona.edad > 20) {
+                persona.imprimirDatosPorConsola();
+            }
+        }
+    }
+
+    // opcion 3, contar a ltotal de personas
+    int contarEstudiantes(){
+        int contador = 0;
+
+        for (Persona persona : this.personas) {
+            if ( persona instanceof Persona ) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    // opcion 4
+    float edadPromedioPyE(){
+        int contadorEdad = 0;
+        float edades = 0;
+        float promedio = 0;
+
+        for (Persona persona : this.personas) {
+            if (persona != null) {
+                edades+=persona.getEdad();
+                contadorEdad++;
+            }
+        }
+        promedio = edades / contadorEdad;
+        return promedio;
+    }    
+
+    // opcion 5: mostrar los datos de la persona de mayor edad
+    int personaMayor(){
+        // crear un vector con la cantidad de personas
+        // añadir las edades al vector
+        // recorrer el vector y comparar si es mayor o menor
+        // devolver el valor mayor
+
+        int contadorP = 0;
+
+        for (Persona persona : this.personas) {
+            if ( !(persona instanceof Estudiante) && persona != null) {
+                contadorP ++;
+            }
+        }
+
+        int[ ] edades =  new int[contadorP];
+
+        int pos = 0;
+        int contenedor = 0;
+        while ( pos < edades.length ){
+            contenedor = edades[ pos ];
+            if (contenedor > edades[pos]){
+                // reemplaza al valor anterior
+                contenedor = edades[pos];
+        } 
+            pos ++;
+        }
+        return contenedor;
+    }
+
+    // opcion 6: 
+    int personaMenor(){
+        // crear un arreglo con la cantidad de personas
+        // añadir las edades al arreglo
+        // recorrer el arreglo y comparar si es mayor o menor
+        // devolver el valor menor
+        int contadorP = 0;
+
+        for (Persona persona : this.personas) {
+            if ( !(persona instanceof Estudiante) && persona != null) {
+                contadorP ++;
+            }
+        }
+
+        int[ ] edades =  new int[contadorP];
+
+        int pos = 0;
+        int contenedor = 0;
+        while ( pos < edades.length ){
+            contenedor = edades[ pos ];
+            if (contenedor < edades[pos]){
+                // reemplaza al valor anterior
+                contenedor = edades[pos];
+        } 
+            pos ++;
+        }
+        return contenedor;
+
+    }
+
+    // opcion 7: mediana de las personas
+    void personasMediana(){
+
+    } 
+
+
 }

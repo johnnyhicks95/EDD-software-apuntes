@@ -18,9 +18,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
+
+
     public static void main(String[] args) throws Exception {
 
         GestorPersonas g = new GestorPersonas();
+
+        Scanner sn = new Scanner(System.in);
 
         // muestras de personas
         g.insertar(new Persona("James Hetfield", 17, "0956978798"));
@@ -40,7 +44,7 @@ public class App {
         // 7. Calcular la mediana:
         // 8. Salir del programa!
 
-        Scanner sn = new Scanner(System.in);
+        // Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; // Guardaremos la opcion del usuario
         
@@ -104,26 +108,35 @@ public class App {
             }
         }
 
+
         // finalizando 
         sn.close();
     }
 
     // funciones para procesamiento de datos
     
-    private static void insertarPersona() {
+    void insertarPersona() {
+        System.out.print("Escriba el nombre: ");
+        String nombre = sn.next();
+        System.out.print("Escriba la edad: ");
+        int edad = sn.nextInt();
+        System.out.print("Escriba la cédula: ");
+        String cedula = sn.next();
+
+        g.insertar( nombre, edad, cedula );
         
-    }
+    } 
 
     private static void cantidadPMayores20() {
-
+        g.mayoresA20();
     }
 
     private static void cantidadEstudiantes() {
-
+        g.contarEstudiantes();
     }
 
     private static void edadPromedio() {
-
+        g.edadPromedioPyE();
     }
 
     private static void menorEdadP() {
